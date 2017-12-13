@@ -1,0 +1,27 @@
+[
+    {
+        "id": 0,
+        "title": "FingerPrint",
+        "desc": "Authentication using the Finger Print sensor in your Android Device"
+    },
+    {
+        "id": 1,
+        "title": "Bar Code and QR Scanner",
+        "desc": "Camera Scanner for QR codes, Bar codes and other supported formats"
+    },
+    {
+        "id": 2,
+        "title": "Credit Card Reader",
+        "desc": "Scanner for Credit Cards using the Card.io SDK from Paypal."
+    },
+    {
+        "id": 3,
+        "title": "Digital Signature",
+        "desc": "Signature Pad with the ability of saving the Signature as na image in your gallery."
+    },
+    {
+        "id": 4,
+        "title": "Camera Roll",
+        "desc": "Obtains images from the Camera of your Android Device or from the Galley."
+    }
+]
