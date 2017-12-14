@@ -4,6 +4,7 @@ import { View, ListView } from 'react-native';
 import Item from './Item';
 import CameraView from './CameraView';
 import FingerPrintView from './FingerPrintView';
+import QRCodeScanner from './QRCodeScanner';
 
 class ItemList extends Component {
 
@@ -23,6 +24,8 @@ class ItemList extends Component {
         switch (id) {
             case 0:
                 return <FingerPrintView />
+            case 1: 
+                return <QRCodeScanner />
             case 4:
                 return <CameraView />
                 break;
