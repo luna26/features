@@ -3,12 +3,15 @@ package com.features;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.rssignaturecapture.RSSignatureCapturePackage;
 import com.hieuvp.fingerprint.ReactNativeFingerprintScannerPackage;
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
+
+import com.rssignaturecapture.RSSignatureCapturePackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -25,8 +28,10 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RSSignatureCapturePackage(),
             new ReactNativeFingerprintScannerPackage(),
-            new RCTCameraPackage()
+            new RCTCameraPackage(),
+            new RSSignatureCapturePackage()
       );
     }
 

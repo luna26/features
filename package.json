@@ -13,6 +13,7 @@
     "react-native-camera-roll-picker": "^1.2.3",
     "react-native-fingerprint-scanner": "^2.2.1",
     "react-native-qrcode-scanner": "0.0.28",
+    "react-native-signature-capture": "^0.4.9",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2"
   },

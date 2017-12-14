@@ -5,6 +5,7 @@ import Item from './Item';
 import CameraView from './CameraView';
 import FingerPrintView from './FingerPrintView';
 import QRCodeScanner from './QRCodeScanner';
+import VirtualSignature from './VirtualSignature';
 
 class ItemList extends Component {
 
@@ -26,6 +27,8 @@ class ItemList extends Component {
                 return <FingerPrintView />
             case 1: 
                 return <QRCodeScanner />
+            case 3:
+                return <VirtualSignature />
             case 4:
                 return <CameraView />
                 break;
