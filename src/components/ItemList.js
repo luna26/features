@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { View, ListView } from 'react-native';
 import Item from './Item';
 import CameraView from './CameraView';
+import FingerPrintView from './FingerPrintView';
 
 class ItemList extends Component {
 
@@ -20,6 +21,8 @@ class ItemList extends Component {
     renderComponent() {
         const { id } = this.props;
         switch (id) {
+            case 0:
+                return <FingerPrintView />
             case 4:
                 return <CameraView />
                 break;
