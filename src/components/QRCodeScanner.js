@@ -1,15 +1,5 @@
 import React, { Component } from 'react';
-
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  NavigatorIOS,
-  TouchableOpacity,
-  Linking,
-  Alert
-} from 'react-native';
-
+import {Alert} from 'react-native';
 import QRCodeScanner from 'react-native-qrcode-scanner';
 
 class ScanScreen extends Component {
@@ -26,23 +16,5 @@ class ScanScreen extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  centerText: {
-
-  },
-
-  textBold: {
-
-  },
-
-  buttonText: {
-
-  },
-
-  buttonTouchable: {
-
-  }
-});
 
 export default ScanScreen;
