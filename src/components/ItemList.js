@@ -6,6 +6,7 @@ import CameraView from './CameraView';
 import FingerPrintView from './FingerPrintView';
 import QRCodeScanner from './QRCodeScanner';
 import VirtualSignature from './VirtualSignature';
+import {Actions} from 'react-native-router-flux';
 
 class ItemList extends Component {
 
@@ -20,32 +21,13 @@ class ItemList extends Component {
         return <Item item={ItemMenu} />;
     }
 
-    renderComponent() {
-        const { id } = this.props;
-        switch (id) {
-            case 0:
-                return <FingerPrintView />
-            case 1: 
-                return <QRCodeScanner />
-            case 3:
-                return <VirtualSignature />
-            case 4:
-                return <CameraView />
-                break;
-            default:
-                return (
-                    <ListView
-                        dataSource={this.dataSource}
-                        renderRow={this.renderRow}
-                    />
-                );
-        }
-    }
-
     render() {
         return (
             <View style={{ flex: 1 }}>
-                {this.renderComponent()}
+                <ListView
+                        dataSource={this.dataSource}
+                        renderRow={this.renderRow}
+                    />
             </View>
         );
     }
