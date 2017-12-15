@@ -8,6 +8,9 @@ export const selectMenu = (menuId) => {
     case 1:
       Actions.qrScannerCode();
       break;
+    case 2:
+      Actions.cardScanner();
+      break;
     case 3:
       Actions.virtualSignature();
       break;

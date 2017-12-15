@@ -9,12 +9,13 @@ import CameraComp from './components/CameraComp';
 import CameraRollPicker from 'react-native-camera-roll-picker';
 import AccessFinger from './components/AccessFinger';
 import DeniedFinger from './components/DeniedFinger';
+import CardScanner from './components/CardScannerIo';
 
 const RouterComponent = () => {
     return (
         <Router>
             <Scene key='root'>
-                <Scene key='demoApp' component={ItemList} title='Demo App' initial />
+                <Scene key='demoApp' component={ItemList} title='Demo App React Native' initial />
                 <Scene key='fingerPrintView' component={FingerPrintView} title='Finger Print'/>
                 <Scene key='cameraView' component={CameraView} title='Camera Roll'/>
                 <Scene key='qrScannerCode' component={QRCodeScanner} title='Code Scanner'/>
@@ -24,6 +25,7 @@ const RouterComponent = () => {
                 <Scene key='rollCamera' component={CameraRollPicker} title='Roll Camera'/>
                 <Scene key='accessFinger' component={AccessFinger} title='Success'/>
                 <Scene key='deniedFinger' component={DeniedFinger} title='Denied'/>
+                <Scene key='cardScanner' component={CardScanner} title='Card Scanner'/>
             </Scene>
         </Router>
     );
