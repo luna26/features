@@ -14,12 +14,12 @@ import QRCodeScanner from 'react-native-qrcode-scanner';
 
 class ScanScreen extends Component {
   onSuccess(e) {
-    Alert.alert('Info', e.data +' '+'type '+e.type);
+    Alert.alert('Info', e.data + ' ' + 'type ' + e.type);
   }
 
   render() {
     return (
-      <QRCodeScanner 
+      <QRCodeScanner
         onRead={this.onSuccess.bind(this)}
         reactivate
       />

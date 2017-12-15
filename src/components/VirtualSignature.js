@@ -55,11 +55,9 @@ class VirtualSignature extends Component {
     _onSaveEvent(result) {
         //result.encoded - for the base64 encoded png
         //result.pathName - for the file path name
-        console.log(result);
     }
     _onDragEvent() {
         // This callback will be called when the user enters signature
-        console.log("dragged");
     }
 }
 

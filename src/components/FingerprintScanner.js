@@ -1,35 +1,21 @@
 import React, { Component, PropTypes } from 'react';
-import {
-  Alert,
-  Image,
-  Text,
-  TouchableOpacity,
-  View,
-  ViewPropTypes
-} from 'react-native';
+import { Alert, TouchableOpacity, View, Text } from 'react-native';
+import * as actions from '../actions';
+import { connect } from 'react-redux';
 import FingerprintScanner from 'react-native-fingerprint-scanner';
 
 
 class FingerprintPopup extends Component {
 
   componentDidMount() {
-    this.setFingerPrint();
-  }
-
-  setFingerPrint() {
     FingerprintScanner
-      .authenticate({ onAttempt: this.handleAuthenticationAttempted })
-      .then(() => {
-        Alert.alert('Fingerprint Authentication', 'Authenticated successfully');
-        forceUpdate.bind(this);
-      })
-      .catch((error) => {
-        this.setState({ errorMessage: error.message });
-      });
-  }
+    .authenticate({ onAttempt: this.handleAuthenticationAttempted })
+    .then(() => {
+      this.props.accessFinger(true);
+    })
+    .catch((error) => {
 
-  componentDidUpdate() {
-    this.setFingerPrint();
+    });
   }
 
   componentWillUnmount() {
@@ -37,20 +23,20 @@ class FingerprintPopup extends Component {
   }
 
   handleAuthenticationAttempted = (error) => {
-    Alert.alert('Fingerprint Authentication', 'Not Match');
-  };
+    this.props.accessFinger(false); 
+  }
 
   render() {
     const { containerStyle } = styles;
     return (
       <View style={containerStyle}>
-        <Text>Confirm Printfinger to continue</Text>
+        <Text>Confirm Print finger to continue!!</Text>
       </View>
     );
   }
 }
 
-styles = {
+const styles = {
   containerStyle: {
     flex: 1,
     justifyContent: 'center',
@@ -58,4 +44,10 @@ styles = {
   }
 }
 
-export default FingerprintPopup;
+const mapStateToProps = state => {
+  return {
+    accessFinger: state.accessFinger
+  };
+};
+
+export default connect(mapStateToProps, actions)(FingerprintPopup);

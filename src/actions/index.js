@@ -36,3 +36,18 @@ export const selectRollCamera = (param) => {
   };
 };
 
+export const accessFinger = (param) => {
+  //if(param) Actions.accessFinger();
+  if (param) {
+    return {
+      type: 'print-finger',
+      payload: Actions.accessFinger
+    };
+  }else{
+    return {
+      type: 'print-finger',
+      payload: Actions.deniedFinger
+    };
+  }
+};
+
