@@ -10,6 +10,7 @@ import CameraRollPicker from 'react-native-camera-roll-picker';
 import AccessFinger from './components/AccessFinger';
 import DeniedFinger from './components/DeniedFinger';
 import CardScanner from './components/CardScannerIo';
+import GeolocationComp from './components/Geolocation';
 
 const RouterComponent = () => {
     return (
@@ -26,6 +27,7 @@ const RouterComponent = () => {
                 <Scene key='accessFinger' component={AccessFinger} title='Success'/>
                 <Scene key='deniedFinger' component={DeniedFinger} title='Denied'/>
                 <Scene key='cardScanner' component={CardScanner} title='Card Scanner'/>
+                <Scene key='geolocation' component={GeolocationComp} title='Geolocation'/>
             </Scene>
         </Router>
     );

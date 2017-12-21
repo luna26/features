@@ -17,6 +17,9 @@ export const selectMenu = (menuId) => {
     case 4:
       Actions.cameraView();
       break;
+    case 5:
+      Actions.geolocation();
+      break;
   }
   return {
     type: 'select_menu',

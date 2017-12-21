@@ -23,5 +23,12 @@
         "id": 4,
         "title": "Camera Roll",
         "desc": "Obtains images from the Camera of your Android Device or from the Galley."
+    },
+
+    {
+        "id": 5,
+        "title": "Geolocation",
+        "desc": ""
     }
+    
 ]
